@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erdos.demo.controllers.AddCardsPage">
+   <children>
+      <ImageView accessibleRole="BUTTON" fitHeight="30.0" fitWidth="30.0" layoutX="4.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/button-back.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="saveButton" layoutX="385.0" layoutY="201.0" mnemonicParsing="false" onAction="#saveButtonPressed" prefHeight="62.0" prefWidth="98.0" style="-fx-background-color: #8cb8db; -fx-background-radius: 15;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="138.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD Cards" wrappingWidth="228.21630859375">
+         <font>
+            <Font name="Niramit ExtraLight" size="45.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.8978622327790974">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.015533626079559326" green="0.31051719188690186" blue="0.6710526347160339" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <ImageView fitHeight="324.0" fitWidth="321.0" layoutX="58.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@images/add-cards.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="147.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="English" wrappingWidth="106.21630859375">
+         <font>
+            <Font name="Academy Engraved LET Plain:1.0" size="33.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="147.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Russian" wrappingWidth="116.21630859375">
+         <font>
+            <Font name="Academy Engraved LET Plain:1.0" size="33.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="169.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" wrappingWidth="72.21630859375">
+         <font>
+            <Font name="Academy Engraved LET Plain:1.0" size="33.0" />
+         </font>
+      </Text>
+      <TextField fx:id="englishField" layoutX="79.0" layoutY="130.0" prefHeight="45.0" prefWidth="251.0" promptText="Apple" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="russianField" layoutX="80.0" layoutY="220.0" prefHeight="45.0" prefWidth="251.0" promptText="Яблоко" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="goBackButton" layoutX="4.0" layoutY="2.0" mnemonicParsing="false" onAction="#goBackPressed" opacity="0.0" prefHeight="28.0" prefWidth="28.0" text="Button">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ComboBox layoutX="79.0" layoutY="320.0" prefHeight="45.0" prefWidth="251.0" promptText="Choose type of word" style="-fx-background-radius: 10; -fx-background-color: white;" fx:id="types">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Noun"/>
+               <String fx:value="Verb"/>
+               <String fx:value="Adjective"/>
+               <String fx:value="Adverb"/>
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Text fx:id="savedMessage" fill="#127e2a" layoutX="123.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="nonSavedMessage" fill="#7d1313" layoutX="124.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="168.2431640625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
